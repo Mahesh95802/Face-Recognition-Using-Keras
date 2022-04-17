@@ -1,10 +1,7 @@
 import cv2
 import os
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-db = os.path.join(BASE_DIR, "DataBase")
-
-def registerNewFace():
+def registerNewFace(db):
     print("Starting the Registration Process...")
     name = input("Name of the new Face: ")
     face_cascade = cv2.CascadeClassifier("Cascades/haarcascade_frontalface_default.xml")

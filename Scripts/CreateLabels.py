@@ -1,10 +1,7 @@
 import os
 import pickle
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-db = os.path.join(BASE_DIR, "DataBase")
-
-def createLabels():
+def createLabels(db):
     print("Starting to Create Labels for the Data....")
     label_ids = {}
     i_id = 0

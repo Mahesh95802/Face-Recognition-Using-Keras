@@ -6,12 +6,9 @@ import matplotlib.pyplot as plt
 import os
 from Scripts.CreateLabels import createLabels
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-db = os.path.join(BASE_DIR, "DataBase")
-
-def train():
+def train(db):
     vgg = VGG16(input_shape=[200, 200] + [3], weights='imagenet', include_top=False)
-    label_ids = createLabels()
+    label_ids = createLabels(db)
     for layer in vgg.layers:
         layer.trainable = False   
     x = Flatten()(vgg.output)

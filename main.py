@@ -14,11 +14,11 @@ def main():
     while(True):
         c = int(input("1 - RecogonizeFace | 2 - RegisterFace: "))
         if c==1:
-            recogonizeFace()
+            recogonizeFace(db)
         elif c==2:
-            registerNewFace()
+            registerNewFace(db)
             print("Training Started")
-            train()
+            train(db)
         else:
             print("Invalid Input")
 

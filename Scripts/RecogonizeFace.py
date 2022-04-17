@@ -5,9 +5,6 @@ import pickle
 from PIL import Image
 from keras.models import load_model
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-db = os.path.join(BASE_DIR, "DataBase")
-
 def recogonizeFace():
     model = load_model('FaceRecognitionModel.h5')
     print("Model Successfully Loaded")
